@@ -8,4 +8,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/locations', [LocationController::class, 'index']);
 Route::prefix('auth')->group(function () {
     Route::post('/signup', [UserController::class, 'store']);
+    Route::post('/login', [UserController::class, 'access']);
 });
